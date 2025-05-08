@@ -1,0 +1,9 @@
+/* * {
+    font-size: 12px;
+}
+
+@media (max-width: 480px) {
+    * {
+        font-size: 1px;
+    }
+} */

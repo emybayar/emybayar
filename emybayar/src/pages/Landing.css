@@ -1,0 +1,143 @@
+@font-face {
+    font-family: merchant;
+    src: url(../assets/merchant.ttf);
+}
+
+body {
+    font-family: merchant;
+}
+
+#header, #main {
+    pointer-events: auto;
+}
+
+div#instructions {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 1%;
+    color: #0018f9;
+    font-size: 10px;
+    max-width: calc((100% - 4% - 2%) / 3);
+}
+
+/* #three-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; 
+    overflow: hidden;
+} */
+
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+div #header {
+    position: fixed;
+    overflow: hidden;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+}
+
+div#header ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 0; */
+    /* margin: 3% 3% 0; */
+    /* margin-top: 3%;
+    margin-left: 3%;
+    margin-right: 3%; */
+    font-size: 20px;
+    padding: 1%;
+    width: calc(100% - 6%);
+    margin: 0 auto;
+    margin-top: 2%;
+    /* border: 2px solid #0018f9; */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+div#header ul li {
+    display: inline-block;
+    cursor: pointer;
+}
+
+div#header ul li #name {
+    margin-right: auto;
+}
+
+div#header ul .right-nav {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    gap: 10px;
+}
+
+div#header ul .right-nav li {
+    font-size: 16px;
+}
+
+a:visited {
+    color: #0018f9;
+}
+
+a:hover {
+    background-color: #0018f9;
+    color: red;
+}
+
+#header a {
+    text-decoration: none;
+}
+
+div#main {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    margin-left: 2%;
+    padding: 1%;
+    max-width: 30vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    line-height: 1.5;
+}
+
+#instructions::after {
+    content: "|";
+    animation: blink 1s step-start infinite;
+  }
+  
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+  
+@media (max-width: 480px) {
+    div#header ul {
+        font-size: 12px; 
+        margin-top: 5%
+    }
+
+    div#header ul .right-nav {
+        gap: 5px;
+    }
+
+    div#instructions {
+        display: none;
+    }
+}
